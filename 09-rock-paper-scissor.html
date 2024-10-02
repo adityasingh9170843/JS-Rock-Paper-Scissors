@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Tic Tac Toe</p>
+    <button onclick="
+        playerMove('rock');
+    ">Rock</button>
+    <button onclick="
+        playerMove('paper');
+    ">paper</button>
+    <button onclick="
+        playerMove('scissor');
+    ">Scissor</button>
+    
+    <p class="js-result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score"></p>
+
+    <button onclick="
+        score.wins = 0;
+        score.losses = 0;
+        score.ties =0;
+        localStorage.removeItem('score')
+        updateScore();
+    ">Reset score</button>
+    <script src="09-rock.js">
+        
+
+        
+    </script>
+</body>
+</html>

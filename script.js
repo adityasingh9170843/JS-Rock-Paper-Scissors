@@ -71,14 +71,13 @@ function playerMove(Move){
     }
     
     updateScore();
-    document.querySelector('.js-result').innerHTML= `Match ${result}`;
-    document.querySelector('.js-moves').innerHTML= `You picked ${Move}. Computer picked ${computerMove}.`;
+    document.querySelector('.js-result').innerHTML= `${result}`;
+    document.querySelector('.js-moves').innerHTML= ` You Chose: <img src="${Move}-emoji.png">
+        Computer Chose: <img src="${computerMove}-emoji.png" >`;
     localStorage.setItem('score',JSON.stringify(score));
-    
-    
+   
 }
 
 function updateScore(){
      document.querySelector('.js-score').innerHTML = `wins: ${score.wins}, Losses: ${score.losses},Tie: ${score.ties}`
 }
-
